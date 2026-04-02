@@ -1,2 +1,0 @@
-from .spatial_metrics import SpatialMetrics
-from .classification_metrics import ClassificationMetrics
