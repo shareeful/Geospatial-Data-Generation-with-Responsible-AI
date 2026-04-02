@@ -1,0 +1,37 @@
+seeds: [42, 123, 256, 512, 1024]
+
+data:
+  crs: "EPSG:32630"
+  resolution_m: 10
+  tau_satellite: 0.50
+  tau_static: 0.70
+  pca_variance: 0.999
+  k_anonymity_grid_m: 50
+  k_min: 5
+
+cgan:
+  latent_dim: 128
+  hidden: [256, 512, 256]
+  lr: 2.0e-4
+  beta1: 0.5
+  beta2: 0.999
+  batch_size: 256
+  max_epochs: 1000
+  early_stop_window: 10
+  early_stop_tol: 0.005
+  lambda_seod: 0.1
+  dropout: 0.3
+
+privacy:
+  epsilon: 5.0
+  delta: 1.0e-5
+  max_grad_norm: 1.0
+  noise_multiplier: 1.1
+
+classifier:
+  n_estimators: 500
+  max_depth: 20
+
+feedback:
+  max_iter: 10
+  convergence: 0.005
